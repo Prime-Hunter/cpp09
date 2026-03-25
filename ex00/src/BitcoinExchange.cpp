@@ -2,16 +2,16 @@
 
 Converter::Converter() {_readDatabase();}
 
-Converter::Converter(Converter const &other)
+Converter::Converter(Converter const &copy)
 {
-	if (this != &other)
-		*this = other;
+	if (this != &copy)
+		*this = copy;
 }
 
-Converter &Converter::operator=(Converter const &other)
+Converter &Converter::operator=(Converter const &src)
 {
-	if (this != &other)
-		_quotes = other._quotes;
+	if (this != &src)
+		_quotes = src._quotes;
 	return (*this);
 }
 
